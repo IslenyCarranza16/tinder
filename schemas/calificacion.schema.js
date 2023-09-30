@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const id = Joi.string().uuid();
+const id = Joi.number().integer();
 const grade = Joi.number().integer().max(10);
 const idUser = Joi.string().uuid();
 

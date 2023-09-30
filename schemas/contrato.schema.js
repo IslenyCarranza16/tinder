@@ -1,5 +1,5 @@
 const Joi = require('joi');
-const id = Joi.string().uuid();
+const id = Joi.number().integer();
 const idUser = Joi.string().uuid();
 const idEnterprise = Joi.string().uuid();
 const idGrade = Joi.string().uuid();
@@ -11,6 +11,7 @@ const dateInitial = Joi.date();
 
 
 const createContractSchema = Joi.object({
+   id: id.required(),
    idUser: idUser.required(),
    idEnterprise: idEnterprise.required(),
    idGrade: idGrade.required(),
