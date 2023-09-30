@@ -33,13 +33,12 @@ app.listen(port,()=>{
 )
 
 routerApi(app)
-
+app.use(bodyParser.json());
 app.use(logError); // toca que este tenga un next
 app.use(BoomerrorHandler)
 app.use(errorHandler);
 
 
-console.log('hola')
 
 
-app.use(bodyParser.json());
+

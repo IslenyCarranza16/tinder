@@ -2,7 +2,7 @@ const { Client } = require('pg');
 
 
 
-async function getConection(){
+
    const cliente = new Client({
     host:'localhost',
     port: 5432, // se pone el port de que se conecta postgess 
@@ -10,9 +10,8 @@ async function getConection(){
     password:'1018483371kr',
     database:'Tinder'
 });
- await cliente.connect(); 
 
- return cliente ; // para conectarse  
-}
+ // para conectarse  
 
-module.exports = getConection; //libreria paa exportar 
+
+module.exports = cliente; //libreria paa exportar 
